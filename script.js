@@ -29,6 +29,11 @@ element.addEventListener('click',
       document.getElementById('spazioofferta').innerHTML="offerta over65";
       document.getElementById('spaziocostobiglietto').innerHTML="&euro; " + costoBigliettoAnziani;
     }
+
+    var numeroCarrozza = Math.floor(Math.random() * 10);
+    document.getElementById("carrozza").innerHTML = numeroCarrozza;
+    var codiceTreno = Math.floor(Math.random() * 10000) + 90000;
+    document.getElementById("codicetreno").innerHTML = codiceTreno;
   }
 );
 
