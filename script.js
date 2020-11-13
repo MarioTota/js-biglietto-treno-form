@@ -10,7 +10,6 @@ element.addEventListener('click',
     var costoBiglietto = kmDaPercorrere * 0.21;
     var costoBigliettoMinor = costoBiglietto - ((costoBiglietto * 20) / 100);
     costoBigliettoMinor = costoBigliettoMinor.toFixed(2);
-
     var costoBigliettoAnziani = costoBiglietto - ((costoBiglietto * 40) / 100);
     costoBigliettoAnziani = costoBigliettoAnziani.toFixed(2);
 
@@ -33,15 +32,19 @@ element.addEventListener('click',
   }
 );
 
-// var element = document.getElementById("annulla");
-// element.addEventListener('click',
-//
-//   function() {
-//     document.getElementById('spazionomepasseggero').innerHTML="";
-//     document.getElementById('spazioofferta').innerHTML="";
-//     document.getElementById('spaziocostobiglietto').innerHTML="";
-//     nomeCognome = document.getElementById("nome").innerHTML="";
-//     kmDaPercorrere = document.getElementById("km").innerHTML="";
-//
-//   }
-// );
+var elementB = document.getElementById("annulla");
+elementB.addEventListener('click',
+
+  function() {
+    var nomeCognome = document.getElementById("nome").value;
+    var kmDaPercorrere = document.getElementById("km").value;
+
+    document.getElementById('spazionomepasseggero').innerHTML="";
+    document.getElementById('spazioofferta').innerHTML="";
+    document.getElementById('spaziocostobiglietto').innerHTML="";
+    document.getElementById("nome").value = "";
+    document.getElementById("km").value = "";
+    document.getElementById("eta").value = "maggiorenne";
+
+  }
+);
