@@ -51,5 +51,7 @@ elementB.addEventListener('click',
     document.getElementById("km").value = "";
     document.getElementById("eta").value = "maggiorenne";
 
+    document.getElementById("carrozza").innerHTML = "";
+    document.getElementById("codicetreno").innerHTML = "";
   }
 );
