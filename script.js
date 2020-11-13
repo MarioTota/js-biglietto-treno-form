@@ -8,24 +8,39 @@ var fasciaEta = document.getElementById("eta").value;
 console.log(fasciaEta);
 
 var costoBiglietto = kmDaPercorrere * 0.21;
-console.log(costoBiglietto);
+console.log("costo ordinario ", costoBiglietto)
 
 var costoBigliettoMinor = costoBiglietto - ((costoBiglietto * 20) / 100);
 costoBigliettoMinor = costoBigliettoMinor.toFixed(2);
+console.log("costo per i minorenni ", costoBigliettoMinor)
 
 var costoBigliettoanziani = costoBiglietto - ((costoBiglietto * 40) / 100);
 costoBigliettoanziani = costoBigliettoanziani.toFixed(2);
+console.log("costo per gli anziani ", costoBigliettoanziani)
+
+var minorenne = document.getElementById("minorenne");
+var maggiorenne = document.getElementById("maggiorenne");
+var over65 = document.getElementById("over65");
 
 var element = document.getElementById("genera");
 element.addEventListener('click',
 
   function() {
-    // document.getElementById('costobiglietto').innerHTML="&euro; " + costoBiglietto;
-    if (fasciaEta === minorenne) {
-      document.getElementById('costobiglietto').innerHTML="&euro; " + costoBigliettoMinor;
-    } else if(fasciaEta === over65) {
-      document.getElementById('costobiglietto').innerHTML="&euro; " + costoBigliettoanziani;
-    }
 
+    document.getElementById('spazionomepasseggero').innerHTML=nomeCognome;
+
+    if (fasciaEta = minorenne) {
+      document.getElementById('spazioofferta').innerHTML="Offerta minorenni";
+      document.getElementById('spaziocostobiglietto').innerHTML="&euro; " + costoBigliettoMinor;
+    }
+    else if(fasciaEta = over65) {
+      document.getElementById('spazioofferta').innerHTML="Offerta over65";
+      document.getElementById('spaziocostobiglietto').innerHTML="&euro; " + costoBigliettoanziani;
+    }
+    else {
+      document.getElementById('spaziocostobiglietto').innerHTML="&euro; " + costoBiglietto;
+      document.getElementById('spazioofferta').innerHTML="Biglietto ordinario";
+
+    }
   }
 );
