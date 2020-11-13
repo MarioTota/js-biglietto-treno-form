@@ -1,0 +1,19 @@
+* {
+
+}
+#genera,
+#annulla {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+table {
+  border: 1px solid black
+}
+
+th,td {
+  padding: 10px;
+}
