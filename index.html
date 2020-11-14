@@ -9,31 +9,36 @@
     <div id="wrapper">
       <h2>calcola il prezzo del tuo biglietto</h2>
       <div id="form_sopra">
-        <div id="nome_cognome">
-          <h4>Nome Cognome</h4>
-          <input id="nome" type="text" name="nome" value="">
+        <div class="row_top">
+          <div id="nome_cognome">
+            <h4>Nome Cognome</h4>
+            <input id="nome" type="text" name="nome" value="">
+          </div>
+          <div id="km_da_percorrere">
+            <h4>Km da percorrere</h4>
+            <input id="km" type="text" name="km" value="">
+          </div>
+          <div id="fascia_eta">
+            <h4>Fascia d'età</h4>
+            <select name="eta" id="eta">
+              <option id="minorenne" value="minorenne">minorenne</option>
+              <option id="maggiorenne" value="maggiorenne">maggiorenne</option>
+              <option id="over65" value="over65">over-65</option>
+            </select>
+          </div>
         </div>
-        <div id="km_da_percorrere">
-          <h4>Km da percorrere</h4>
-          <input id="km" type="text" name="km" value="">
-        </div>
-        <div id="fascia_eta">
-          <h4>Fascia d'età</h4>
-          <select name="eta" id="eta">
-            <option id="minorenne" value="minorenne">minorenne</option>
-            <option id="maggiorenne" value="maggiorenne">maggiorenne</option>
-            <option id="over65" value="over65">over-65</option>
-          </select>
-        </div>
-        <div id="genera">
-          Genera
-        </div>
-        <div id="annulla">
-          Annulla
+        <div class="row_bottom">
+          <div id="genera">
+            Genera
+          </div>
+          <div id="annulla">
+            Annulla
+          </div>
         </div>
       </div>
-      <h2>il tuo biglietto</h2>
+    
       <div id="biglietto">
+        <h2>il tuo biglietto</h2>
         <h3>Dettaglio Passeggeri</h3>
         <table>
           <tr>
