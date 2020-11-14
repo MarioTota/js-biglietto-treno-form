@@ -1,5 +1,8 @@
 var fasceArray = ["minorenne", "maggiorenne", "over65"];
-
+var impostaVisibilita = document.getElementById("biglietto");
+var impostaInvisibilita = document.getElementById("biglietto");
+impostaInvisibilita.className = "hidden";
+document.getElementById("eta").value = "";
 var conseguenzeClickGenera = document.getElementById("genera");
 conseguenzeClickGenera.addEventListener('click',
 
@@ -21,22 +24,28 @@ conseguenzeClickGenera.addEventListener('click',
 
     document.getElementById('spazionomepasseggero').innerHTML=nomeCognome;
 
+    if (nomeCognome == "") {
+      window.alert("Devi inserire Nome e Cognome");
+      console.log("manca nome");
+      var impostaInvisibilita = document.getElementById("biglietto");
+      impostaInvisibilita.className = "hidden";
+    }
+
     if (fasciaEta == fasceArray[0]) {
-      document.getElementById('spazioofferta').innerHTML="Offerta minorenni";
+      document.getElementById('spazioofferta').innerHTML="Sconto Minorenni";
       document.getElementById('spaziocostobiglietto').innerHTML="&euro; " + costoBigliettoMinor;
     }
 
     if (fasciaEta == fasceArray[1]) {
-      document.getElementById('spazioofferta').innerHTML="biglietto ordinario";
+      document.getElementById('spazioofferta').innerHTML="Biglietto Ordinario";
       document.getElementById('spaziocostobiglietto').innerHTML="&euro; " + costoBiglietto;
     }
 
     if (fasciaEta == fasceArray[2]) {
-      document.getElementById('spazioofferta').innerHTML="offerta over65";
+      document.getElementById('spazioofferta').innerHTML="Sconto Over-65";
       document.getElementById('spaziocostobiglietto').innerHTML="&euro; " + costoBigliettoAnziani;
     }
 
-    var impostaVisibilita = document.getElementById("biglietto");
     impostaVisibilita.className = "visible";
   }
 );
@@ -53,12 +62,11 @@ conseguenzeClickAnnulla.addEventListener('click',
     document.getElementById('spaziocostobiglietto').innerHTML="";
     document.getElementById("nome").value = "";
     document.getElementById("km").value = "";
-    document.getElementById("eta").value = "maggiorenne";
+    document.getElementById("eta").value = "";
 
     document.getElementById("carrozza").innerHTML = "";
     document.getElementById("codicetreno").innerHTML = "";
 
-    var impostaInvisibilita = document.getElementById("biglietto");
     impostaInvisibilita.className = "hidden";
   }
 );

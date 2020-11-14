@@ -1,9 +1,12 @@
 * {
+  font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   color: white;
   text-align: center;
+}
+body {
   background-color: #b91450;
 }
 
@@ -14,13 +17,29 @@
   margin: auto;
 }
 
+.hidden {
+  opacity: 0;
+  transition: all 1.4s ease 0.0s;
+}
+.visible {
+  opacity: 1;
+  transition: all 1.4s ease 0.0s;
+}
+
 #form_sopra {
-  background-color: white;
   width: 100%;
+  background-color: white;
+  border-radius: 15px;
 }
 #form_sopra .row_top {
   display: flex;
   justify-content: center;
+}
+#form_sopra input,
+#form_sopra select {
+  border: 1px solid #b91450;
+  color: black;
+  border-radius: 5px;
 }
 #form_sopra .row_top div {
   margin-bottom: 10px;
@@ -31,37 +50,64 @@
 #form_sopra #annulla {
   display: inline-block;
   margin-top: 20px;
+  margin-bottom: 20px;
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid #b91450;
   cursor: pointer;
+  color: #b91450;
 }
 #biglietto {
   display: flex;
   flex-direction: column;
-  background-color: white;
   width: 100%;
 }
-
-h2 {
+h1 {
   text-transform: uppercase;
   padding-bottom: 30px;
+}
+h2 {
+  text-transform: uppercase;
   padding-top: 30px;
+  font-size: 32px;
+}
+h3 {
+  color: black;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+h4 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #b91450;
+}
+#container_bottom {
+  background-color: white;
+  padding: 16px;
 }
 table {
   border: 1px solid black;
   margin: auto;
   width: 100%;
+  border-spacing: 0;
 }
-
+th {
+  font-weight: bold;
+}
 th,td {
   padding: 10px;
+  color: black;
+  text-align: left;
 }
 
-.hidden {
-  visibility: hidden;
+tr th:first-child,
+tr td:first-child {
+  background-color: grey;
 }
 
-.visible {
-  visibility: visible;
-  transition: all 1.4s ease 0.0s;
+#spazionomepasseggero {
+  color: black;
+  text-align: start;
+  font-size: 23px;
+  font-weight: 900;
 }

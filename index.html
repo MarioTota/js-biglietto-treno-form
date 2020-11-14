@@ -2,12 +2,14 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title></title>
+    <title>Ticket generator</title>
   </head>
   <body>
     <div id="wrapper">
-      <h2>calcola il prezzo del tuo biglietto</h2>
+      <h1>calcola il prezzo del tuo biglietto</h1>
       <div id="form_sopra">
         <div class="row_top">
           <div id="nome_cognome">
@@ -36,26 +38,31 @@
           </div>
         </div>
       </div>
-    
+
       <div id="biglietto">
         <h2>il tuo biglietto</h2>
-        <h3>Dettaglio Passeggeri</h3>
-        <table>
-          <tr>
-            <th>Nome Passeggero</th>
-            <th>Offerta</th>
-            <th>Carrozza</th>
-            <th>Codice CP</th>
-            <th>Costo biglietto</th>
-          </tr>
-          <tr>
-            <td id="spazionomepasseggero"></td>
-            <td id="spazioofferta"></td>
-            <td id="carrozza"></td>
-            <td id="codicetreno"></td>
-            <td id="spaziocostobiglietto"></td>
-          </tr>
-        </table>
+        <div id="container_bottom">
+          <h3>Dettaglio Passeggeri</h3>
+          <table>
+            <tr>
+              <th>
+                Nome Passeggero
+                <div id="spazionomepasseggero"></div>
+              </th>
+              <th>Offerta</th>
+              <th>Carrozza</th>
+              <th>Codice CP</th>
+              <th>Costo biglietto</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td id="spazioofferta"></td>
+              <td id="carrozza"></td>
+              <td id="codicetreno"></td>
+              <td id="spaziocostobiglietto"></td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
     <script src="script.js" charset="utf-8"></script>
