@@ -26,9 +26,9 @@ conseguenzeClickGenera.addEventListener('click',
 
     if (nomeCognome == "") {
       window.alert("Devi inserire Nome e Cognome");
-      console.log("manca nome");
-      var impostaInvisibilita = document.getElementById("biglietto");
       impostaInvisibilita.className = "hidden";
+    } else {
+      impostaVisibilita.className = "visible";
     }
 
     if (fasciaEta == fasceArray[0]) {
@@ -46,7 +46,6 @@ conseguenzeClickGenera.addEventListener('click',
       document.getElementById('spaziocostobiglietto').innerHTML="&euro; " + costoBigliettoAnziani;
     }
 
-    impostaVisibilita.className = "visible";
   }
 );
 

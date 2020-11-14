@@ -27,7 +27,6 @@ body {
 }
 
 #form_sopra {
-  width: 100%;
   background-color: white;
   border-radius: 15px;
 }
@@ -48,18 +47,18 @@ body {
 }
 #form_sopra #genera,
 #form_sopra #annulla {
-  display: inline-block;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 10px;
   border: 1px solid #b91450;
+  border-radius: 5px;
   cursor: pointer;
   color: #b91450;
+  font-size: 15px;
+  font-weight: bold;
 }
 #biglietto {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+
 }
 h1 {
   text-transform: uppercase;
@@ -86,7 +85,9 @@ h4 {
   padding: 16px;
 }
 table {
-  border: 1px solid black;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
   margin: auto;
   width: 100%;
   border-spacing: 0;
@@ -95,11 +96,16 @@ th {
   font-weight: bold;
 }
 th,td {
-  padding: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   color: black;
   text-align: left;
 }
-
+tr td:first-child {
+  padding-bottom: 45px;
+  padding-top: 0;
+}
 tr th:first-child,
 tr td:first-child {
   background-color: grey;
