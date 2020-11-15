@@ -48,15 +48,15 @@ conseguenzeClickGenera.addEventListener('click',
     if (nomeCognome == "" || kmDaPercorrere == "" || fasciaEta == "" ) {
       window.alert("Devi compilare tutti i campi");
       impostaInvisibilita.className = "hidden";
-      } else {
-        impostaVisibilita.className = "visible";
+    } else {
+      impostaVisibilita.className = "visible";
     }
-    if (!isNaN(nomeCognome) || isNaN(kmDaPercorrere) ) {
+
+    if (!isNaN(nomeCognome) || isNaN(kmDaPercorrere)) {
       window.alert("Nome Cognome : sono ammesse solo lettere\nKm da percorrere: sono ammessi solo numeri");
       impostaInvisibilita.className = "hidden";
     }
     // /controlli sui valori inseriti
-
   }
 );
 
