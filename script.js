@@ -51,12 +51,8 @@ conseguenzeClickGenera.addEventListener('click',
       } else {
         impostaVisibilita.className = "visible";
     }
-    if (!isNaN(nomeCognome)) {
-      window.alert("Nome Cognome: sono ammesse solo lettere");
-      impostaInvisibilita.className = "hidden";
-    }
-    if (isNaN(kmDaPercorrere)) {
-      window.alert("Km da percorrere: sono ammessi solo numeri");
+    if (!isNaN(nomeCognome) || isNaN(kmDaPercorrere) ) {
+      window.alert("Nome Cognome : sono ammesse solo lettere\nKm da percorrere: sono ammessi solo numeri");
       impostaInvisibilita.className = "hidden";
     }
     // /controlli sui valori inseriti
