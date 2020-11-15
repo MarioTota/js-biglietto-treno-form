@@ -44,25 +44,22 @@ conseguenzeClickGenera.addEventListener('click',
     }
     // /calcola il prezzo del biglietto in base all'eà
 
+    // controlli sui valori inseriti
     if (nomeCognome == "" || kmDaPercorrere == "" || fasciaEta == "" ) {
       window.alert("Devi compilare tutti i campi");
       impostaInvisibilita.className = "hidden";
       } else {
         impostaVisibilita.className = "visible";
-        }
-
-    // if (!isNaN(nomeCognome)) {
-    //   window.alert("Nome Cognome: Puoi inserire solo lettere");
-    //   impostaInvisibilita.className = "hidden";
-    //   } else {
-    //     impostaVisibilita.className = "visible";
-    //   }
-    // if (isNaN(kmDaPercorrere)) {
-    //   window.alert("Km da percorrere: Puoi inserire solo numeri");
-    //   impostaInvisibilita.className = "hidden";
-    //   } else {
-    //     impostaVisibilita.className = "visible";
-    //   }
+    }
+    if (!isNaN(nomeCognome)) {
+      window.alert("Nome Cognome: sono ammesse solo lettere");
+      impostaInvisibilita.className = "hidden";
+    }
+    if (isNaN(kmDaPercorrere)) {
+      window.alert("Km da percorrere: sono ammessi solo numeri");
+      impostaInvisibilita.className = "hidden";
+    }
+    // /controlli sui valori inseriti
 
   }
 );
